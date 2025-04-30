@@ -25,6 +25,10 @@ function tillVersal(namn) {
 let maxElev = elever.reduce((bäst, nuvarande) =>
     nuvarande.medel > bäst.medel ? nuvarande : bäst
 );
+if (elever.length === 0) {
+    console.log("No students available.");
+    return;
+}
 
 // Skriv ut den med högst medel
 console.log(tillVersal(maxElev.namn));
