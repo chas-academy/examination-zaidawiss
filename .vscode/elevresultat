@@ -1,0 +1,34 @@
+ov: [9, 6, 7, 8, 7, 6, 7, 7, 6, 7, 8, 7, 6] }
+];
+
+const NUM_PROV = 13;
+const NUM_ELEVER = elever.length;
+
+// Räkna ut medelpoäng för varje elev
+elever.forEach(elev => {
+    let summa = elev.prov.reduce((a, b) => a + b, 0);
+    elev.medel = summa / NUM_PROV;
+});
+
+// Funktion som gör första bokstaven stor
+function tillVersal(namn) {
+    return namn.charAt(0).toUpperCase() + namn.slice(1).toLowerCase();
+}
+
+// Hitta eleven med högst medel
+let maxElev = elever.reduce((bäst, nuvarande) =>
+    nuvarande.medel > bäst.medel ? nuvarande : bäst
+);
+
+// Skriv ut den med högst medel
+console.log(tillVersal(maxElev.namn));
+
+// Räkna ut totalmedel
+let totalMedel = elever.reduce((summa, e) => summa + e.medel, 0) / NUM_ELEVER;
+
+// Skriv ut elever med lägre än gruppmedel
+elever.forEach(elev => {
+    if (elev.medel < totalMedel) {
+        console.log(tillVersal(elev.namn));
+    }
+});
