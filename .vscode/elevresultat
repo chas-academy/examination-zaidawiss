@@ -1,4 +1,10 @@
-ov: [9, 6, 7, 8, 7, 6, 7, 7, 6, 7, 8, 7, 6] }
+// Elevdata – du kan ändra här om du vill testa andra värden
+const elever = [
+    { namn: "alice", prov: [8, 9, 7, 6, 10, 9, 8, 7, 10, 10, 9, 10, 8] },
+    { namn: "bob", prov: [10, 10, 6, 4, 5, 6, 5, 5, 4, 6, 5, 5, 4] },
+    { namn: "charlie", prov: [3, 9, 9, 1, 10, 9, 9, 10, 9, 10, 10, 9, 10] },
+    { namn: "david", prov: [10, 10, 5, 4, 4, 5, 4, 5, 4, 3, 5, 4, 4] },
+    { namn: "eve", prov: [9, 6, 7, 8, 7, 6, 7, 7, 6, 7, 8, 7, 6] }
 ];
 
 const NUM_PROV = 13;
